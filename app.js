@@ -9,7 +9,7 @@ app.use(express.json());
 app.use(logger('dev'));
 app.use(apiMetrics())
 app.get('/', (req, res) => {
-    res.status(200).json("Server up and running")
+    res.status(200).json({ msg: "Server up and running" })
 });
 
 module.exports = app;
