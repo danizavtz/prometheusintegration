@@ -1,0 +1,10 @@
+#!/usr/bin/env node
+const app = require('../app');
+
+try {
+    const porta = process.env.PORT || 3000;
+    app.listen(porta);
+    console.log('Web service listening at http://localhost:%s', porta);
+} catch (e) {
+    throw e;
+}

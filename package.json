@@ -1,0 +1,32 @@
+{
+  "name": "prometheusintegration",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon ./bin/www",
+    "start": "node ./bin/www",
+    "test": "mocha --reporter progress test/ --exit",
+    "coverage": "nyc mocha --exit --reporter progress ./test/",
+    "coverage:report": "nyc report --reporter=lcov --reporter=text",
+    "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danizavtz/prometheusintegration.git"
+  },
+  "author": "danizavtz",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/danizavtz/prometheusintegration/issues"
+  },
+  "homepage": "https://github.com/danizavtz/prometheusintegration#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "morgan": "^1.10.0",
+    "prometheus-api-metrics": "^3.2.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
